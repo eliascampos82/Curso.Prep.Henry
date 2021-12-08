@@ -5,8 +5,16 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+  if (x > y) {
+    return  x + " es mayor que "+ y;
+  }  
+  if (y > x) {
+    return y + " es mayor que "+ x;
+  }
+ else (x===y)
+    return "los dos numeros son iguales ";
 }
-
+obtenerMayor(7, 15)
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"

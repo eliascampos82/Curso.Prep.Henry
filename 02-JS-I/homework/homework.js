@@ -145,9 +145,9 @@ elevarAlCuadrado(5)
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return Math.pow(num,3) ; ;
+  return Math.pow(num,3)  
 }
-elevarAlCubo(5)
+elevarAlCubo(3)
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:

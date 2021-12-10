@@ -3,34 +3,54 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  var nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
+  return(nombresFamilia[0]);
 }
-
+devolverPrimerElemento()
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  var nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
+  return(nombresFamilia[3]);
 }
+devolverUltimoElemento()
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  var nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
+  return (nombresFamilia.length);
 }
-
+obtenerLargoDelArray()
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-}
+  var matriz=[12,3,45,22,];
+  var suma=0
+  for (var i =0 ;i <matriz.length;i++){
+     suma=1 + matriz[i];
+  }
+  return suma
+  }
+  incrementarPorUno(array)
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+const nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
+nombresFamilia.push("chocolate");
+return(nombresFamilia);
 }
+agregarItemAlFinalDelArray()
+
+
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -38,7 +58,11 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+const nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
+nombresFamilia.unshift("chocolate");
+return nombresFamilia; 
 }
+agregarItemAlComienzoDelArray()
 
 
 function dePalabrasAFrase(palabras) {
@@ -47,35 +71,63 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-}
+  var palabra1=["Hello"];
+  return palabra1 + " " + palabras
+  }
+  dePalabrasAFrase("world!")
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+const nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
+if (nombresFamilia.includes("Elias")){
+  return true}
+  return false 
+  
 }
+arrayContiene()
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+var matriz=[12,3,45,22,];
+var suma=0
+for (var i =0 ;i <matriz.length;i++){
+  suma=suma + matriz[i];
 }
+return suma
+}
+agregarNumeros()
 
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+var matriz=[4,10,9,7,5,8,6];
+var suma=0
+for (var i =0 ;i <matriz.length;i++){
+  suma=suma + matriz[i];
 }
+var resultado=suma/matriz.length
+return resultado
+}
+promedioResultadosTest()
 
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+var matriz=[12,3,45,22,54,55,33,89];
+var resultado=Math.max(...matriz)
+return resultado
 }
+numeroMasGrande()
 
 
 function multiplicarArgumentos() {
@@ -97,8 +149,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+if (numeroDeDia=== 1 || numeroDeDia=== 7 ){
+  return "Es fin de semana"} 
+  return "es dia laboral"   
 } 
+diaDeLaSemana(5)
 
 
 function empiezaConNueve(n) {

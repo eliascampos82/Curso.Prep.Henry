@@ -3,52 +3,48 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  var nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
-  return(nombresFamilia[0]);
+  
+return array[0];
 }
-devolverPrimerElemento()
+devolverPrimerElemento([97, 100, 80, 55, 72, 94])
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  var nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
-  return(nombresFamilia[3]);
+return array[array.length -1];
 }
-devolverUltimoElemento()
+devolverUltimoElemento ([97, 100, 80, 55, 72, 94])
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  var nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
-  return (nombresFamilia.length);
+return array.length;
 }
-obtenerLargoDelArray()
+obtenerLargoDelArray([34, 1, 45, 12])
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var matriz=[12,3,45,22,];
-  var suma=0
-  for (var i =0 ;i <matriz.length;i++){
-     suma=1 + matriz[i];
-  }
-  return suma
-  }
-  incrementarPorUno(array)
+var nuevoArray=[];
+for (var i =0 ;i <array.length;i++){
+  nuevoArray[i] = array[i] + 1;
+}
+return nuevoArray;
+}
+incrementarPorUno([12,3,45,22])
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-const nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
-nombresFamilia.push("chocolate");
-return(nombresFamilia);
+array.push(elemento);
+return array
 }
-agregarItemAlFinalDelArray()
+agregarItemAlFinalDelArray([34, 1, 45, 12],98)
 
 
 
@@ -58,11 +54,10 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-const nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
-nombresFamilia.unshift("chocolate");
-return nombresFamilia; 
+array.unshift(elemento);
+return array; 
 }
-agregarItemAlComienzoDelArray()
+agregarItemAlComienzoDelArray([34, 1, 45, 12],98)
 
 
 function dePalabrasAFrase(palabras) {
@@ -71,78 +66,87 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var palabra1=["Hello"];
-  return palabra1 + " " + palabras
-  }
-  dePalabrasAFrase("world!")
+return palabras.join(" ")
+}
+dePalabrasAFrase(["Hello","world!"])
 
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-const nombresFamilia = ["Morena", "Elias", "Maria", "mono"];
-if (nombresFamilia.includes("Elias")){
+if (array.includes(elemento)){
   return true}
   return false 
-  
+ 
 }
-arrayContiene()
+arrayContiene([12,3,45,22,54,55,33,89],55)
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-var matriz=[12,3,45,22,];
 var suma=0
-for (var i =0 ;i <matriz.length;i++){
-  suma=suma + matriz[i];
+for (var i =0 ;i <numeros.length;i++){
+  suma=suma + numeros[i];
 }
 return suma
 }
-agregarNumeros()
+agregarNumeros([12,3,45,22])
 
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-var matriz=[4,10,9,7,5,8,6];
 var suma=0
-for (var i =0 ;i <matriz.length;i++){
-  suma=suma + matriz[i];
+for (var i =0 ;i <resultadosTest.length;i++){
+  suma=suma + resultadosTest[i];
 }
-var resultado=suma/matriz.length
-return resultado
+var resultado=suma/resultadosTest.length
+return resultado 
 }
-promedioResultadosTest()
+promedioResultadosTest([4,10,9,7,5,8,6])
 
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-var matriz=[12,3,45,22,54,55,33,89];
-var resultado=Math.max(...matriz)
+var resultado=Math.max(...numeros)
 return resultado
 }
-numeroMasGrande()
+numeroMasGrande([12,3,45,22,54,55,33,89])
+
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if(arguments.length < 1) return 0;
+  var total = 1;
+  for(var i = 0; i < arguments.length; i++) {
+    total = total * arguments[i];
+  }
+  return total;
 }
+multiplicarArgumentos()
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+var contador = 0;
+for (var i = 0; i < arreglo.length ; i++) {
+  if(arreglo[i] > 19){
+    contador++
+  }
 }
-
+return contador
+}
+cuentoElementos([6,3,45,7,8,5,9])
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
@@ -151,7 +155,7 @@ function diaDeLaSemana(numeroDeDia) {
   //Escribe tu código aquí   
 if (numeroDeDia=== 1 || numeroDeDia=== 7 ){
   return "Es fin de semana"} 
-  return "es dia laboral"   
+  return "Es dia Laboral"    
 } 
 diaDeLaSemana(5)
 
@@ -168,8 +172,11 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
-} 
+
+   
+}
+
+ 
 
 
 function mesesDelAño(array) {
@@ -177,6 +184,8 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+
+
 }
 
 
@@ -184,7 +193,18 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+var nuevoArray = [];
+for(let i= 0; i < array.length; i++) {
+  if(array[i] > 100) {
+    nuevoArray.push(array[i]);
+  }
 }
+return nuevoArray;
+}
+
+mayorACien([100, 4, 56, 78, 200, 120, 7, 160, 148, 22])
+
+
 
 
 function breakStatement(numero) {

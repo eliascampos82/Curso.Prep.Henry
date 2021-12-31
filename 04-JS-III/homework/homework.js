@@ -164,16 +164,26 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  var nuevo=n.toString()
+  if (nuevo[0]==="9"){
+    return true
+  }
+  else{
+    return false
+  }
 }
-
+empiezaConNueve(7665)
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-
-   
+for(var i =1;i<arreglo.length;i++){
+  if(arreglo[0]!==arreglo[i]){
+    return false
+  }
+}
+return true   
 }
 
  
@@ -184,8 +194,18 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-
-
+var nuevoArray=[]
+for(var i=0;i<array.length;i++){
+  if (array[i]==="Enero"|| array[i]==="Marzo" || array[i]==="Noviembre"){
+    nuevoArray.push(array[i]);
+  }
+}
+if(nuevoArray.length<3){
+  return "No se encontraron los meses pedidos";
+}   
+else{
+  return nuevoArray;
+}
 }
 
 
@@ -215,6 +235,19 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var array = [];
+for (var i=0;i>10;i++){
+  numero=numero +2;
+  if (numero===i)break;
+    array.push(numero);
+  }
+}
+if (i<10){
+  return "Se interrumpió la ejecución";
+}   
+else{
+   return array;  
+}
 }
 
 
